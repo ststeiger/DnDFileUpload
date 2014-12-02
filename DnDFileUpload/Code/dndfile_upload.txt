@@ -1,0 +1,54 @@
+in inkscape - canvas to object size ?
+'fit page to selection' is a button on the 
+page tab of document properties [file menu] 
+
+
+
+1a:
+http://www.worldwidewhat.net/2011/06/html5-native-drag-and-drop-file-upload/
+http://www.sitepoint.com/html5-javascript-open-dropped-files/
+http://blogs.sitepointstatic.com/examples/tech/filedrag/3/index.html
+http://blogs.sitepointstatic.com/examples/tech/filedrag/1/index.html
+http://www.sitepoint.com/html5-file-drag-and-drop/
+
+
+
+
+1b
+http://www.sitepoint.com/html5-javascript-file-upload-progress-bar/
+http://www.sitepoint.com/html5-ajax-file-upload/
+https://www.devbridge.com/sourcery/components/drag-and-drop-uploader/
+
+
+
+http://stackoverflow.com/questions/21784647/how-do-i-handle-html5-multiple-file-uploads-in-asp-net-mvc
+http://tutorials.jenkov.com/html5/drag-and-drop.html
+http://www.codeguru.com/csharp/csharp/cs_internet/uploading-files-using-html5-drag-and-drop-and-asp.net.htm
+http://www.strathweb.com/2012/04/html5-drag-and-drop-asynchronous-multi-file-upload-with-asp-net-webapi/
+
+
+
+http://www.htmlgoodies.com/html5/javascript/drag-files-into-the-browser-from-the-desktop-HTML5.html#fbid=Um9OwP38dgQ
+http://www.w3schools.com/html/html5_draganddrop.asp
+http://www.tutorialspoint.com/html5/html5_drag_drop.htm
+
+
+
+
+
+PHP:
+https://code.google.com/p/html5uploader/
+
+
+
+http://uxrepo.com/icon/upload-by-iconic
+http://uxrepo.com/icon-sets/
+
+
+
+var div = document.createElement('div');
+div.appendChild(document.createTextNode("lala<la"));
+
+var markup = (new XMLSerializer()).serializeToString(div);
+var markup = (new XMLSerializer()).serializeToString(document);
+console.log(markup);
