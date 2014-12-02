@@ -59,6 +59,7 @@
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Code\info.txt" />
     <Content Include="Default.aspx" />
     <Content Include="Code\dndfile_upload.txt" />
     <Content Include="IndexPageDebug.aspx" />

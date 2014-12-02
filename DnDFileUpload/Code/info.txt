@@ -1,0 +1,3 @@
+﻿
+https://blueimp.github.io/jQuery-File-Upload/
+https://github.com/blueimp/jQuery-File-Upload/tree/master/js
