@@ -16,6 +16,10 @@ function addClass(e, a)
     var b, g, h, i;
     var core_rspace = /\s+/;
 
+    if (typeof e == "string")
+        e = document.getElementById(e);
+
+
     if (a && typeof a == "string")
     {
         b = a.split(core_rspace);
@@ -43,6 +47,9 @@ function removeClass(g, a)
     var c, h, i, j;
     var rclass = /[\t\r\n]/g;
     var core_rspace = /\s+/;
+
+    if (typeof g == "string")
+        g = document.getElementById(g);
 
     if (a && typeof a == "string" || a === undefined)
     {

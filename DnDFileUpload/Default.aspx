@@ -45,14 +45,22 @@
             {
                 addClass(dropZone, 'error');
                 text("lblInfo", 'Browser Not Supported!');
-                
                 return;
+            }
+
+            
+            dropZone.ondragstart = function () {
+                
             }
 
             // Add a nice drag effect
             dropZone.ondragover = function () {
                 // dropZone.addClass('hover');
                 addClass(dropZone, "hover");
+
+                addClass("dropSymbol", "circleBaseVisible");
+                console.log("dropSymbol");
+
                 return false;
             };
 
@@ -60,6 +68,7 @@
             dropZone.ondragend = function () {
                 // dropZone.removeClass('hover');
                 removeClass(dropZone, "hover");
+                removeClass("dropSymbol", "circleBaseVisible");
                 return false;
             };
 
@@ -68,7 +77,8 @@
                 // Stop the browser from opening the file in the window
                 event.preventDefault();
                 removeClass(dropZone, "hover");
-
+                removeClass("dropSymbol", "circleBaseVisible");
+                // removeClass("dropSymbol", "circleBaseVisible");
 				
                 for(var i = 0; i < event.dataTransfer.files.length; ++i)
                 {
@@ -165,6 +175,18 @@
             <!-- Drop File Here to Upload.-->
         </div>
     </form>
+
+<div id="dropSymbol" class="circleBaseInvisible ">
+<span style="display: block; padding-top: 250px; color: #FFFFFF; font-size: 5mm;">
+Incoming!
+</span>
+<span style="display: block; padding-top: 2mm; color: #FFFFFF; font-size: 3.5mm;">
+Drop your files to instantly upload them to Drive
+</span>
+</div>
+
+
+
 
     <object id="obj" type="text/html"></object>
     <!--

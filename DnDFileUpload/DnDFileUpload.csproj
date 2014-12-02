@@ -62,6 +62,16 @@
     <Content Include="Default.aspx" />
     <Content Include="Code\dndfile_upload.txt" />
     <Content Include="IndexPageDebug.aspx" />
+    <Content Include="Resources\gdocs\aux-0ffe4313f8b7667a4bf7df304b0fdf75.png" />
+    <Content Include="Resources\gdocs\drawings-16.png" />
+    <Content Include="Resources\gdocs\icon_1_document_x16.png" />
+    <Content Include="Resources\gdocs\icon_1_spreadsheet_x16.png" />
+    <Content Include="Resources\gdocs\incoming.png" />
+    <Content Include="Resources\gdocs\incoming_transp.png" />
+    <Content Include="Resources\gdocs\loading_bg_f5.gif" />
+    <Content Include="Resources\gdocs\presentations-16.png" />
+    <Content Include="Resources\gdocs\spinner_32_4152eb447e3e756250b29a0b19b2bbf9.gif" />
+    <Content Include="Resources\gdocs\spreadsheets-16.png" />
     <Content Include="Resources\graycloud.png" />
     <Content Include="Resources\graycloud.svg" />
     <Content Include="Index.aspx" />

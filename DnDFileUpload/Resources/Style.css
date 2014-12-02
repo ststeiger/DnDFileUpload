@@ -1,4 +1,26 @@
-﻿body 
+﻿
+
+.circleBaseVisible 
+{
+    display: block !important;
+}
+
+.circleBaseInvisible {
+    display: none;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    background: rgb(66, 133, 244);
+    border: none;
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+body 
 {
     font: 12px Arial;
 }
