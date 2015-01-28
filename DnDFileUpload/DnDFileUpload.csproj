@@ -63,6 +63,7 @@
     <Content Include="Code\info.txt" />
     <Content Include="Default.aspx" />
     <Content Include="Code\dndfile_upload.txt" />
+    <Content Include="DragOut.aspx" />
     <Content Include="dragout_orig.htm" />
     <Content Include="dragout.htm" />
     <Content Include="dragout_info.txt" />
@@ -106,6 +107,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DragOut.aspx.cs">
+      <DependentUpon>DragOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DragOut.aspx.designer.cs">
+      <DependentUpon>DragOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="IndexPageDebug.aspx.cs">
       <DependentUpon>IndexPageDebug.aspx</DependentUpon>
