@@ -1,0 +1,83 @@
+
+
+Tut:
+http://www.thecssninja.com/javascript/gmail-dragout
+
+
+Demo: 
+http://www.thecssninja.com/demo/gmail_dragout/
+
+var file = document.getElementById("dragout");
+
+file.addEventListener("dragstart",function(evt){
+    evt.dataTransfer.setData("DownloadURL",fileDetails);
+},false);
+
+
+
+var fileDetails;
+
+if(typeof file.dataset === "undefined") {
+    // Grab it the old way
+    fileDetails = file.getAttribute("data-downloadurl");
+} else {
+    fileDetails = file.dataset.downloadurl;
+}
+
+
+
+
+Drag out files like Gmail
+
+Google in their quest to keep me busy in trying to figure out how they do their innovative features in Gmail are at it again. First it was drag and drop uploading which used a clever trick to make it work in Chrome which currently doesn’t support the FileReader in their stable release. Now they’ve added the ability to drag out attachments to your file system, allowing you to bypass the usual method of the save dialog.
+
+While the first feature of drag and drop uploading I figured out quite easily, this drag out feature was a doozy.
+
+How did I figure it out?
+
+There were two clues which got me started. One it only works in Chrome so it had to be an extension to the current Drag and Drop API. Two, after some poking around in gmail, there was a custom attribute on the attachment link called download_url which colon separated the attachments mime type, file name and download link.
+
+Since Gmails JavaScript is obfuscated to within in an inch of its life there was no easy way to attach the built in debugger to anything that might give it away. So I tried downloading the script and running it through various unobfuscaters which made it format nicely but I still had to work with function names like vHG etc.
+
+My last hope was chromiums bug tracker and searching to see if any bugs or feature requests were filed that could help give it away. I knew the download_url attribute played a role and it would be set using setData method on the dataTransfer object. So I searched high and low on Chromiums bug tracker for matches to “download_url”, “downloadurl” & “downloadurl setData” nothing nada, zip. So I turned to the webkit bug tracker, still nothing! So I thought maybe Mozilla had discussed it on their bug tracker, a long shot but worth a try. Bingo! This bug led me to this bug, on webkits bug tracker don’t ask why the search didn’t bring this up, and then onto this proposal. We’re in business!
+
+How does it work?
+
+So we’ve found the details let’s play with it.
+
+View a live demo Download the source files
+Update: I’ve rolled out drag to desktop across my site for all my demo source files. If you’re using Chrome 5+ just drag the “Download the source files” link to your desktop!
+
+The above demo will, in Chrome 5+, allow you to drag any of the items to your desktop and save them without having to go through the usual save dialog process.
+
+var file = document.getElementById("dragout");
+
+file.addEventListener("dragstart",function(evt){
+    evt.dataTransfer.setData("DownloadURL",fileDetails);
+},false);
+From the code above you attach an ondragstart event listener to something you want to “drag out” and save to your file system. On the dragstart event you set the data using the new “DownloadURL” type and pass file information to it.
+
+In order to pass the correct information to the event we access the download_url attribute and use that for our setData call. I’ve made one change that is slightly different to how Gmail sets and gets the attribute.
+
+Font file
+Instead of creating a new attribute I have instead used the new custom data attributes specified in the HTML5 spec. While not officially supported by Chrome yet we can still use it and add a simple test for support and fork the code either way.
+
+The custom attribute needs three things specified that are separated by colons in order for it to work. The files mime type, the name you wish it to be saved as (this can be anything) and the url to where the file can be downloaded from.
+
+var fileDetails;
+
+if(typeof file.dataset === "undefined") {
+    // Grab it the old way
+    fileDetails = file.getAttribute("data-downloadurl");
+} else {
+    fileDetails = file.dataset.downloadurl;
+}
+Above I do a check to see if the element supports the dataset attribute if not use getAttribute to grab the value.
+
+A cool finding
+
+Playing around with this new functionality I did find a cool side effect that if I drag a file that’s set the DownloadURL type on the setData method into a page using Firefox 3.6+ that will capture a drop event the dataTransfer file attribute will act as though it’s captured a local file and can be manipulated with the FileAPI e.g. In my font dragr web app if I drag a font file that’s been attached to an email it will render the font as though I’ve dragged it from my local file system! Doing the same with Chrome 6, which also supports file attribute on the dataTransfer property, will ignore the drop.
+
+Predicting the next challenge from Google
+
+So what do I think the Gmail team will do next? Since they announced, and are now starting, their 6 week release cycle of chrome. I foresee the ability to upload folders not just individual files, being able to capture a photo from your web cam straight into an embedded picture using the proposed media capture proposal. Whatever it is I’m sure it’ll knock everyone’s socks off and make me rack my brain in trying to figure it out.

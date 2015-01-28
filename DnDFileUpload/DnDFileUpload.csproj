@@ -55,6 +55,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
   </ItemGroup>
@@ -62,6 +63,9 @@
     <Content Include="Code\info.txt" />
     <Content Include="Default.aspx" />
     <Content Include="Code\dndfile_upload.txt" />
+    <Content Include="dragout_orig.htm" />
+    <Content Include="dragout.htm" />
+    <Content Include="dragout_info.txt" />
     <Content Include="IndexPageDebug.aspx" />
     <Content Include="Resources\gdocs\aux-0ffe4313f8b7667a4bf7df304b0fdf75.png" />
     <Content Include="Resources\gdocs\drawings-16.png" />
@@ -90,8 +94,12 @@
     </Content>
     <Content Include="Resources\jquery-1.8.2.min.js" />
     <Content Include="FileUpload.ashx" />
+    <Content Include="_styles.css" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ajax\GetFile.ashx.cs">
+      <DependentUpon>GetFile.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -123,6 +131,9 @@
     <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="downloads\Eadui2.ttf" />
+    <Content Include="downloads\HTML5CheatSheet.pdf" />
+    <Content Include="ajax\GetFile.ashx" />
     <None Include="Properties\PublishProfiles\DND_Stefan.pubxml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
