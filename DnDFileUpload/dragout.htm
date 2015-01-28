@@ -20,16 +20,16 @@
 	<div class="container">
 		<h1>Drag out any of these links to your dekstop</h1>
 		
-        <a href="ajax/GetFile.ashx?name=Eadui.ttf" id="dragout" class="dragme" draggable="true" data-downloadurl="application/octet-stream:Eadui2.ttf:http://localhost:49172/Virt_X/ajax/GetFile.ashx?name=Eadui2.ttf">Font file</a>
+        <a href="ajax/GetFile.ashx?name=Eadui2.ttf" id="dragout" class="dragme" draggable="true" data-downloadurl="application/octet-stream:Eadui2.ttf:http://localhost:49172/Virt_X/ajax/GetFile.ashx?name=Eadui2.ttf">Font file</a>
 		
-        <a href="ajax/GetFile.ashx?name=html5-cheat-sheet.pdf" id="dragout2" class="dragme" draggable="true" data-downloadurl="application/pdf:HTML5CheatSheet.pdf:http://localhost:49172/Virt_X/ajax/GetFile.ashx?name=HTML5CheatSheet.pdf">PDF file</a>
+        <a href="ajax/GetFile.ashx?name=HTML5CheatSheet.pdf" id="dragout2" class="dragme" draggable="true" data-downloadurl="application/pdf:HTML5CheatSheet.pdf:http://localhost:49172/Virt_X/ajax/GetFile.ashx?name=HTML5CheatSheet.pdf">PDF file</a>
 	</div>
 	
 	<script type="text/javascript">
 		var files = [document.getElementById("dragout"),document.getElementById("dragout2"),document.getElementById("dragout3")],
 			fileDetails = [];
 		
-		// Some forward thinking, utilise the custom data attribute to extend attributes available.
+        // Some forward thinking, utilise the custom data attribute to extend attributes available.http://localhost:49172/Virt_X/ajax/GetFile.ashx?name=Eadui2.ttf
 		if(typeof files[0].dataset === "undefined") {
 			// Grab it the old way
 			fileDetails[0] = files[0].getAttribute("data-downloadurl");
