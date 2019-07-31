@@ -96,6 +96,11 @@
     <Content Include="SQL\PB\118_T_VWS_Ref_PdfBibliotheksGruppe_i18n.sql" />
     <Content Include="SQL\PB\119_T_VWS_Ref_PdfBibliotheksGruppe_i18n_Cust.sql" />
     <Content Include="SQL\PB\120_T_VWS_PdfBibliothek.sql" />
+    <Content Include="SQL\query\[T_VWS_PdfBibliothek].sql" />
+    <Content Include="SQL\query\[T_VWS_Ref_PdfBibliotheksGruppe].sql" />
+    <Content Include="SQL\query\update.sql" />
+    <Content Include="SQL\query\data.sql" />
+    <Content Include="SQL\query\columns.sql" />
     <Content Include="SQL\schema\cust_io8.sql" />
     <Content Include="SQL\schema\DetLang.sql" />
     <Content Include="SQL\schema\schemanfo.sql" />
