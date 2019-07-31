@@ -1,0 +1,56 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1027 768" >
+	
+	<style type="text/css" media="all">
+		
+	</style>
+	
+	<title>SVG Table</title>
+ 	
+	<g id="columnGroup">
+		<rect x="65" y="10" width="75" height="125" fill="gainsboro"/>
+		<rect x="265" y="10" width="75" height="125" fill="gainsboro"/>
+		
+		<text x="30" y="30" font-size="18px" font-weight="bold" fill="crimson">
+			   <tspan x="30" dy="1.5em">Q1</tspan><!--
+			--><tspan x="30" dy="1em">Q2</tspan><!--
+			--><tspan x="30" dy="1em">Q3</tspan><!--
+			--><tspan x="30" dy="1em">Q4</tspan><!--
+			--><tspan x="30" dy="1em">Q5</tspan>
+		</text>
+		
+		<text x="100" y="30" font-size="18px" text-anchor="middle">
+			   <tspan x="100" font-weight="bold" fill="crimson">Sales</tspan><!--
+			--><tspan x="100" dy="1.5em">$ 223</tspan><!--
+			--><tspan x="100" dy="1em">$ 183</tspan><!--
+			--><tspan x="100" dy="1em">$ 277</tspan><!--
+			--><tspan x="100" dy="1em">$ 402</tspan><!--
+			--><tspan x="100" dy="1em">$ 402</tspan>
+		</text>
+		
+		<text x="200" y="30" font-size="18px" text-anchor="middle">
+			   <tspan x="200" font-weight="bold" fill="crimson">Expenses</tspan><!--
+			--><tspan x="200" dy="1.5em">$ 195</tspan><!--
+			--><tspan x="200" dy="1em">$&#x205F;&#x205F;&#x205F;70</tspan><!--
+			--><tspan x="200" dy="1em">$ 88</tspan><!--
+			--><tspan x="200" dy="1em">$ 133</tspan><!--
+			--><tspan x="200" dy="1em">$ 133</tspan>
+		</text>
+		
+		<text x="300" y="30" font-size="18px" text-anchor="middle">
+			   <tspan x="300" font-weight="bold" fill="crimson">Net</tspan><!--
+			--><tspan x="300" dy="1.5em">$ 28</tspan><!--
+			--><tspan x="300" dy="1em">$ 113</tspan><!--
+			--><tspan x="300" dy="1em">$ 189</tspan><!--
+			--><tspan x="300" dy="1em">$ 269</tspan><!--
+			--><tspan x="300" dy="1em">$ 269</tspan>
+		</text>
+	</g>
+	
+	
+	<!--
+	&#160;&#160;&#160;
+	https://en.wikipedia.org/wiki/Non-breaking_space
+	-->
+	
+</svg>

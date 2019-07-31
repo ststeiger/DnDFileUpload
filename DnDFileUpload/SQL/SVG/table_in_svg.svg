@@ -1,0 +1,99 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1027 768" >
+
+<style type="text/css" media="all">
+	
+	table 
+	{
+		display: table;
+		#border-collapse: separate;
+		#border-spacing: 2px;
+		border-color: gray;
+	
+		border-collapse: collapse;
+	}
+	
+	
+	table, th, td 
+	{
+		border: 1px solid black;
+	}
+	
+	
+	th, td 
+	{
+		padding: 15px;
+	}
+	
+	
+	th 
+	{
+		text-align: left;
+	}
+	
+	
+	table#t01 th 
+	{
+		color: white;
+		background-color: black;
+		text-transform: uppercase;
+	}
+	
+	
+	table#t01 tr:nth-child(even) 
+	{
+		background-color: #eee;
+	}
+	
+	
+	table#t01 tr:nth-child(odd) 
+	{
+		background-color: #fff;
+	}
+	
+</style>
+
+
+  <foreignObject x="10" y="10" width="300" height="400">
+    <body xmlns="http://www.w3.org/1999/xhtml">
+		<table id="t01" style="width: 1cm;">
+			<thead>
+			    <tr>
+					<!--
+					<th colspan="2">Table header</th>
+					-->
+			        <th style="width: 0.5cm;">Spalte 1</th>
+					<th style="width: 0.5cm;">Spalte 2</th>
+			    </tr>
+			</thead>
+			<tbody>
+			    <tr>
+			        <td>Zeile 1 Spalte 1</td>
+			        <td>Zeile 1 Spalte 2</td>
+			    </tr>
+				<tr>
+			        <td>Zeile 2 Spalte 1</td>
+			        <td>Zeile 2 Spalte 2</td>
+			    </tr>
+				<tr>
+			        <td>Zeile 3 Spalte 1</td>
+			        <td>Zeile 3 Spalte 2</td>
+			    </tr>
+				<tr>
+			        <td>Zeile 4 Spalte 1</td>
+			        <td>Zeile 4 Spalte 2</td>
+			    </tr>
+				<tr>
+			        <td>Zeile 5 Spalte 1</td>
+			        <td>Zeile 5 Spalte 2</td>
+			    </tr>
+			</tbody>
+			<tfoot>
+			    <tr>
+			        <th colspan="2">Table footer</th>
+			    </tr>
+			</tfoot>
+		</table>
+    </body>
+  </foreignObject>
+</svg>
