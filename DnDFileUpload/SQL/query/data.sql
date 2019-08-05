@@ -1,9 +1,20 @@
 
+-- DECLARE @BE_ID int 
+-- DECLARE @regID nvarchar(36) 
+-- DECLARE @isBackoffice nvarchar(4) 
+
+-- SET @BE_ID=12435 
+-- SET @regID=N'77c6ba09-e9e2-4f2f-9102-2fe80b1e9b46' 
+-- SET @isBackoffice=N'true' 
+
+
 SELECT 
-	  T_VWS_PdfBibliothek.PB_UID
-	-- ,T_VWS_PdfBibliothek.PB_PBG_UID
-	  
-	 ,
+	 T_VWS_PdfBibliothek.PB_UID AS id 
+	,NEWID() AS upload_id 
+	,T_VWS_PdfBibliothek.PB_UID 
+	-- ,T_VWS_PdfBibliothek.PB_PBG_UID 
+	 
+	,
 	 COALESCE
 	 ( 
 		 T_VWS_Ref_PdfBibliotheksGruppe_i18n_Cust.PBG_i18n_Cust_Name 
@@ -38,3 +49,8 @@ LEFT JOIN T_VWS_Ref_PdfBibliotheksGruppe_i18n_Cust
 
 WHERE (1=1) 
 AND T_VWS_PdfBibliothek.PB_Status = 1 
+
+ORDER BY 
+	 PBG_Name 
+	,PB_Text 
+	 

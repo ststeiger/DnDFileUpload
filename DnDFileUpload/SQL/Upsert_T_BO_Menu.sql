@@ -13,6 +13,7 @@
 		, N'ZZZZZ' AS ME_Tabelle 
 		, N'FOOBAR' AS ME_FeldPrfx 
 		, N'~/Backoffice/Visualisierung/legende_swissre_A0.htm' AS ME_Page 
+		--, NULL AS ME_Page 
 		, 1 AS ME_Status 
 		, 0 AS ME_Sort 
 		, 1 AS ME_IsShowInMenu
@@ -109,7 +110,8 @@
 		, N'' AS ME_NurMandant 
 		, N'fdf86595-0500-4b9c-a8da-47376885fbf7' AS ME_MOD_UID 
 		, 0 AS ME_EnableDelete 
-		, NULL AS ME_SL_UID 
+		-- , NULL AS ME_SL_UID 
+		, '091089E7-B7EE-4CEB-9272-51E4954C15FF' AS ME_SL_UID 
 )
 
 MERGE INTO T_BO_Menu AS A 
