@@ -1,4 +1,11 @@
 
+-- DELETE FROM T_VWS_PdfBibliothek; 
+-- SELECT * FROM T_VWS_PdfBibliothek 
+
+
+
+
+
 DECLARE @fluchtplanRenderer xml 
 DECLARE @unfallRenderer xml 
 DECLARE @unbekanntePersonRenderer xml 
@@ -42,32 +49,34 @@ SET @logoRenderer_COR_ = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2
 
 ;WITH CTE AS 
 (
-			  SELECT 'fluchtplanRenderer' AS name, @fluchtplanRenderer AS content, '01BF9D21-E3E8-432A-87FF-9D943EC0F8C3' AS PBG_UID, 'Fluchtplan Legende' AS titel 
-	UNION ALL SELECT 'unfallRenderer' AS name, @unfallRenderer AS content, '01BF9D21-E3E8-432A-87FF-9D943EC0F8C3' AS PBG_UID, 'Unfall' AS titel 
-	UNION ALL SELECT 'unbekanntePersonRenderer' AS name, @unbekanntePersonRenderer AS content, '01BF9D21-E3E8-432A-87FF-9D943EC0F8C3' AS PBG_UID, 'Unbekanne Person' AS titel 
-	UNION ALL SELECT 'brandRenderer' AS name, @brandRenderer AS content, '01BF9D21-E3E8-432A-87FF-9D943EC0F8C3' AS PBG_UID, 'Brand' AS titel 
-	UNION ALL SELECT 'evakuationRenderer' AS name, @evakuationRenderer AS content, '01BF9D21-E3E8-432A-87FF-9D943EC0F8C3' AS PBG_UID, 'Evakuation' AS titel 
-	UNION ALL SELECT 'ihrStaoRenderer' AS name, @ihrStaoRenderer AS content, '01BF9D21-E3E8-432A-87FF-9D943EC0F8C3' AS PBG_UID, NULL AS titel 
+			  SELECT 'fluchtplanRenderer' AS name, @fluchtplanRenderer AS content, '01BF9D21-E3E8-432A-87FF-9D943EC0F8C3' AS PBG_UID, 'Fluchtplan Legende' AS titel, 'fluchtplan' AS renderer
+	UNION ALL SELECT 'unfallRenderer' AS name, @unfallRenderer AS content, '01BF9D21-E3E8-432A-87FF-9D943EC0F8C3' AS PBG_UID, 'Unfall' AS titel, 'unfall' AS renderer 
+	UNION ALL SELECT 'unbekanntePersonRenderer' AS name, @unbekanntePersonRenderer AS content, '01BF9D21-E3E8-432A-87FF-9D943EC0F8C3' AS PBG_UID, 'Unbekanne Person' AS titel, 'unbekanntePerson' AS renderer 
+	UNION ALL SELECT 'brandRenderer' AS name, @brandRenderer AS content, '01BF9D21-E3E8-432A-87FF-9D943EC0F8C3' AS PBG_UID, 'Brand' AS titel, 'brand' AS renderer 
+	UNION ALL SELECT 'evakuationRenderer' AS name, @evakuationRenderer AS content, '01BF9D21-E3E8-432A-87FF-9D943EC0F8C3' AS PBG_UID, 'Evakuation' AS titel, 'evakuation' AS renderer 
+	UNION ALL SELECT 'ihrStaoRenderer' AS name, @ihrStaoRenderer AS content, '01BF9D21-E3E8-432A-87FF-9D943EC0F8C3' AS PBG_UID, NULL AS titel, 'ihrStao' AS renderer 
 
-	UNION ALL SELECT 'parkdeckRenderer' AS name, @parkdeckRenderer AS content, '1E306062-9529-4BFD-B1BD-B4B5E5103EDC' AS PBG_UID, 'I5 Parkdeck UG' AS titel 
-	UNION ALL SELECT 'sammelplatzRenderer' AS name, @sammelplatzRenderer AS content, '1E306062-9529-4BFD-B1BD-B4B5E5103EDC' AS PBG_UID, 'Sammelplatz Mitarbeiter L28' AS titel 
-	UNION ALL SELECT 'l28Renderer' AS name, @l28Renderer AS content, '1E306062-9529-4BFD-B1BD-B4B5E5103EDC' AS PBG_UID, 'Geschossanzeige' AS titel 
+	UNION ALL SELECT 'parkdeckRenderer' AS name, @parkdeckRenderer AS content, '1E306062-9529-4BFD-B1BD-B4B5E5103EDC' AS PBG_UID, 'I5 Parkdeck UG' AS titel, 'parkdeck' AS renderer 
+	UNION ALL SELECT 'sammelplatzRenderer' AS name, @sammelplatzRenderer AS content, '1E306062-9529-4BFD-B1BD-B4B5E5103EDC' AS PBG_UID, 'Sammelplatz Mitarbeiter L28' AS titel, 'l28' AS renderer 
+	UNION ALL SELECT 'l28Renderer' AS name, @l28Renderer AS content, '1E306062-9529-4BFD-B1BD-B4B5E5103EDC' AS PBG_UID, 'Geschossanzeige' AS titel, 'l28' AS renderer 
 
-	UNION ALL SELECT 'corLogoRenderer' AS name, @corLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo COR' AS titel 
-	UNION ALL SELECT 'swisslifeLogoRenderer' AS name, @swisslifeLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo SwissLife' AS titel 
-	UNION ALL SELECT 'berninaLogoRenderer' AS name, @berninaLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo Bernina' AS titel 
-	UNION ALL SELECT 'stadlerLogoRenderer' AS name, @stadlerLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo Stadler' AS titel  
-	UNION ALL SELECT 'mobimoLogoRenderer' AS name, @mobimoLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo Mobimo' AS titel   
-	UNION ALL SELECT 'kantonLuzernLogoRenderer' AS name, @kantonLuzernLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo Mobimo' AS titel 
-	UNION ALL SELECT 'sonovaLogoRenderer' AS name, @sonovaLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo Sonova' AS titel 
-	UNION ALL SELECT 'monopolyLogoRenderer' AS name, @monopolyLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo Monopoly' AS titel 
-	UNION ALL SELECT 'logoRenderer_swissLife' AS name, @logoRenderer_swissLife AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo SwissLife' AS titel 
-	UNION ALL SELECT 'logoRenderer_COR_' AS name, @logoRenderer_COR_ AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo SwissLife' AS titel 
+	UNION ALL SELECT 'corLogoRenderer' AS name, @corLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo COR' AS titel, 'sonovaLogo' AS renderer 
+	UNION ALL SELECT 'swisslifeLogoRenderer' AS name, @swisslifeLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo SwissLife' AS titel, 'sonovaLogo' AS renderer 
+	UNION ALL SELECT 'berninaLogoRenderer' AS name, @berninaLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo Bernina' AS titel, 'sonovaLogo' AS renderer 
+	UNION ALL SELECT 'stadlerLogoRenderer' AS name, @stadlerLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo Stadler' AS titel, 'sonovaLogo' AS renderer 
+	UNION ALL SELECT 'mobimoLogoRenderer' AS name, @mobimoLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo Mobimo' AS titel, 'sonovaLogo' AS renderer 
+	UNION ALL SELECT 'kantonLuzernLogoRenderer' AS name, @kantonLuzernLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo Mobimo' AS titel, 'sonovaLogo' AS renderer 
+	UNION ALL SELECT 'sonovaLogoRenderer' AS name, @sonovaLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo Sonova' AS titel, 'sonovaLogo' AS renderer 
+	UNION ALL SELECT 'monopolyLogoRenderer' AS name, @monopolyLogoRenderer AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo Monopoly' AS titel, 'sonovaLogo' AS renderer 
+	-- UNION ALL SELECT 'logoRenderer_swissLife' AS name, @logoRenderer_swissLife AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo SwissLife' AS titel, 'swisslifeLogo' AS renderer 
+	-- UNION ALL SELECT 'logoRenderer_COR_' AS name, @logoRenderer_COR_ AS content, '6737F36C-147E-4F78-A2D2-9FE0EF04E111' AS PBG_UID, 'Logo SwissLife' AS titel, 'sonovaLogo' AS renderer 
 	
 ) 
-/*
+
 UPDATE t2 
-	SET PB_SVG = CTE.content 
+	SET  PB_SVG = CTE.content 
+		-- ,PB_Renderer = CTE.renderer
+		,PB_Renderer = REPLACE(CTE.name, 'renderer', '') 
 FROM CTE 
 
 LEFT JOIN T_VWS_Ref_PdfBibliotheksGruppe 
@@ -75,18 +84,21 @@ LEFT JOIN T_VWS_Ref_PdfBibliotheksGruppe
 
 LEFT JOIN T_VWS_PdfBibliothek AS t2 
 	ON t2.PB_Text = CTE.titel 
-*/
 
 
 
+/*
 SELECT 
 	 CTE.name 
 	,CTE.content 
 	,CTE.PBG_UID 
 	,CTE.titel 
+	,CTE.renderer 
+	-- ,REPLACE(CTE.name, 'renderer', '') AS r 
 	,T_VWS_Ref_PdfBibliotheksGruppe.PBG_Name 
 	,T_VWS_PdfBibliothek.PB_UID 
 	,T_VWS_PdfBibliothek.PB_Text 
+	,T_VWS_PdfBibliothek.PB_Renderer 
 FROM CTE 
 
 LEFT JOIN T_VWS_Ref_PdfBibliotheksGruppe 
@@ -94,7 +106,7 @@ LEFT JOIN T_VWS_Ref_PdfBibliotheksGruppe
 
 LEFT JOIN T_VWS_PdfBibliothek 
 	ON T_VWS_PdfBibliothek.PB_Text = CTE.titel 
-	
+*/
 
 -- Rahmen 
 -- Legende 

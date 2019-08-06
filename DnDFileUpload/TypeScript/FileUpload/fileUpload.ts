@@ -27,7 +27,8 @@ declare function removeChildren(title: HTMLElement): void;
 
 let dropZone: HTMLElement;
 // let maxRequestLength = <%=maxRequestLength%>;
-let maxRequestLength = 1073741824;
+let maxRequestLength = 1073741824;
+
 
 
 // Initializes the dropZone

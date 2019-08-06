@@ -7,6 +7,7 @@ CREATE TABLE dbo.T_VWS_PdfBibliothek
 	,PB_MDT_UID uniqueidentifier NULL 
 	,PB_PBG_UID uniqueidentifier NULL 
 	,PB_Text national character varying(250) NULL 
+	,PB_Renderer national character varying(250) NULL 
 	,PB_SVG xml NULL 
 	,PB_Sort int NOT NULL 
 	,PB_Status int NOT NULL 

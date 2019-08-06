@@ -96,8 +96,8 @@
     <Content Include="SQL\PB\118_T_VWS_Ref_PdfBibliotheksGruppe_i18n.sql" />
     <Content Include="SQL\PB\119_T_VWS_Ref_PdfBibliotheksGruppe_i18n_Cust.sql" />
     <Content Include="SQL\PB\120_T_VWS_PdfBibliothek.sql" />
-    <Content Include="SQL\query\[T_VWS_PdfBibliothek].sql" />
-    <Content Include="SQL\query\[T_VWS_Ref_PdfBibliotheksGruppe].sql" />
+    <Content Include="SQL\query\02_[T_VWS_PdfBibliothek].sql" />
+    <Content Include="SQL\query\01_[T_VWS_Ref_PdfBibliotheksGruppe].sql" />
     <Content Include="SQL\query\update.sql" />
     <Content Include="SQL\query\data.sql" />
     <Content Include="SQL\query\columns.sql" />
@@ -110,9 +110,9 @@
     <Content Include="SQL\SVG\svg_table2.svg" />
     <Content Include="SQL\SVG\table_in_svg - Kopie.svg" />
     <Content Include="SQL\SVG\table_in_svg.svg" />
-    <Content Include="SQL\Upsert_T_BO_Menu.sql" />
-    <Content Include="SQL\Upsert_T_COR_Ref_Slickcolumn.sql" />
-    <Content Include="SQL\Upsert_T_COR_Slicklist.sql" />
+    <Content Include="SQL\03_Upsert_T_BO_Menu.sql" />
+    <Content Include="SQL\02_Upsert_T_COR_Ref_Slickcolumn.sql" />
+    <Content Include="SQL\01_Upsert_T_COR_Slicklist.sql" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
